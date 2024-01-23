@@ -1,0 +1,28 @@
+{
+  "name": "random_thoughts_blog_app",
+  "version": "1.0.0",
+  "description": "Blog with potential",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd blog-clientside && npm run start",
+		"backend": "cd blog-api && npx nodemon",
+		"start": "concurrently \"npm run backend\"  \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midnightmoet/Random_Thoughts_Blog_App.git"
+  },
+  "keywords": [
+    "blog",
+    "MERN",
+    "stack",
+    "javascript"
+  ],
+  "author": "Lisa Miner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/midnightmoet/Random_Thoughts_Blog_App/issues"
+  },
+  "homepage": "https://github.com/midnightmoet/Random_Thoughts_Blog_App#readme"
+}

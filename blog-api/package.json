@@ -9,6 +9,7 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-validator": "^7.0.1",
     "mongoose": "^6.0.8",
     "multer": "^1.4.3",
     "nodemon": "^2.0.13",
@@ -41,7 +42,6 @@
   },
   "description": "random thoughts blog which is my go to for a final project",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/midnightmoet/Random_Thoughts_Blog_App.git"
