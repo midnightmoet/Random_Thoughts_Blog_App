@@ -70,6 +70,10 @@
     margin-right: 45px;
     cursor: pointer;
     justify-content: center;
-    color: green;
+    color: blue;
     
+}
+
+.sidebarIcon:hover {
+    color: orchid;
 }
