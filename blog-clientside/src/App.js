@@ -11,7 +11,10 @@ import Compose from "./pages/compose/Compose";
 import Settings from "./pages/settings/Settings";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
+<<<<<<< HEAD
 import Contact from "./pages/contact/Contact";
+=======
+>>>>>>> 99337b1ea0b98ed4d5bf26d49940b356b2f9cacd
 
 // Main App component
 export default function App() {
@@ -30,6 +33,7 @@ export default function App() {
           <Home />
         </Route>
 
+<<<<<<< HEAD
         {/* Contact Page */}
         <Route path="/contact">
           <Contact />
@@ -50,6 +54,23 @@ export default function App() {
           {user ? <Compose /> : <Register />}
         </Route>
 
+=======
+        {/* Register Page: Show Home if user is already logged in, otherwise show Register */}
+        <Route path="/register">
+          {user ? <Home /> : <Register />}
+        </Route>
+
+        {/* Login Page: Show Home if user is already logged in, otherwise show Login */}
+        <Route path="/login">
+          {user ? <Home /> : <Login />}
+        </Route>
+
+        {/* Compose Page: Show Compose if user is logged in, otherwise show Register */}
+        <Route path="/compose">
+          {user ? <Compose /> : <Register />}
+        </Route>
+
+>>>>>>> 99337b1ea0b98ed4d5bf26d49940b356b2f9cacd
         {/* Settings Page: Show Settings if user is logged in, otherwise show Register */}
         <Route path="/settings">
           {user ? <Settings /> : <Register />}
