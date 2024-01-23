@@ -1,16 +1,17 @@
-// fixed className that was confusing 
+import React from "react";
 import "./post.css";
 import { Link } from "react-router-dom";
 
-export default function Post({ post }) {
-  const publicFile = "http://localhost:2000/images/";
+const publicFile = "http://localhost:2000/images/";
+
+const Post = ({ post }) => {
   return (
     <div className="post">
-      {post.photo && <img className="postImg" src={publicFile + post.photo} alt="" />}
+      {post.photo && <img className="postImg" src={`${publicFile}${post.photo}`} alt="" />}
       <div className="postInfo">
         <div className="postCategories">
           {post.categories.map((c) => (
-            <span className="postCategory">{c.name}</span>
+            <span key={c._id} className="postCategory">{c.name}</span>
           ))}
         </div>
         <Link to={`/post/${post._id}`} className="link">
@@ -21,7 +22,11 @@ export default function Post({ post }) {
           {new Date(post.createdAt).toDateString()}
         </span>
       </div>
-      <p className="postDescription">{post.descriptions}</p>
+      <p className="postDescription">{post.description}</p>
     </div>
   );
-}
+};
+
+export default Post;
+
+// Cleaned up code 1/23/24

@@ -1,63 +1,79 @@
-.login{
-    /* The height calculation takes into account the full screen minus some pixels for the topbar */
-    height: calc(100vh - 50px);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    /* background-color: pink; */
-    background: url("https://media.istockphoto.com/photos/two-tree-branches-with-green-leaves-at-the-edges-on-a-concrete-table-picture-id1270374400?b=1&k=20&m=1270374400&s=170667a&w=0&h=Im8KW0MhQFSlTSYJ9DthYEaDAUSqMds9wO3prjOduHw=");
-    background-size: cover;
+.login {
+  /* The height calculation takes into account the full screen minus some pixels for the topbar */
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: pink; */
+  background: url("https://media.istockphoto.com/photos/two-tree-branches-with-green-leaves-at-the-edges-on-a-concrete-table-picture-id1270374400?b=1&k=20&m=1270374400&s=170667a&w=0&h=Im8KW0MhQFSlTSYJ9DthYEaDAUSqMds9wO3prjOduHw=");
+  background-size: cover;
 }
 
 .loginTitle {
-    /* margin-top: 100px; */
-    font-size: 45px;
-    font-family: 'Koh Santepheap', cursive;
-    /* font-weight: bold; */
-    /* font-style: italic; */
+  /* margin-top: 100px; */
+  font-size: 45px;
+  font-family: "Koh Santepheap", cursive;
+  /* font-weight: bold; */
+  /* font-style: italic; */
 }
 
 .loginForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .loginForm > label {
-    margin: 10px 0px;
+  margin: 10px 0px;
 }
 
 .loginInput {
-    padding: 10px;
-    background-color: lightgray;
-    border: none;
-    border-radius: 10px;
+  padding: 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
 }
 
 .loginButton {
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: white;
-    border: 1px solid brown;
-    color: black;
-    border-radius: 10px;
-    padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid brown;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .loginButton:disabled {
-    cursor: not-allowed;
-    background-color: blue;
+  cursor: not-allowed;
+  background-color: blue;
 }
 
 .loginRegisterButton {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid brown;
-    border-radius: 10px;
-    padding: 10px;
-    color: black;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid brown;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.click-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.click-link a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.click-link a:hover {
+  text-decoration: underline;
 }

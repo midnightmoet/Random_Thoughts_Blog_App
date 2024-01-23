@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./sidebar.css";
 
-export default function Sidebar() {
+const Sidebar = () => {
     const [ categories, setCategory ] = useState([]);
 
     useEffect(() => {
@@ -49,10 +49,12 @@ export default function Sidebar() {
 
                     <li><a href="https://www.instagram.com/lisa.miner/"><i className="sidebarIcon fab fa-instagram-square"></i></a></li>
                     
-                    <li><a href="https://www.linkedin.com/in/lisachampagne/"><i className="sidebarIcon fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/lisa-l-miner/"><i className="sidebarIcon fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
             </div>
 		</div>
 	);
 }
+
+export default Sidebar;

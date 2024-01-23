@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./singlePost.css";
 
-export default function SinglePost() {
+const SinglePost = () => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
@@ -106,3 +106,5 @@ export default function SinglePost() {
     </div>
   );
 }
+
+export default SinglePost;

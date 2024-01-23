@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
 
-export default function TopBar() {
+const TopBar = () => {
   const { user, dispatch } = useContext(Context);
   // for some reason adding the PF makes the images break, investigate //
   const publicFile = "http://localhost:2000/images/";
@@ -14,9 +14,7 @@ export default function TopBar() {
   };
   return (
     <div className="top">
-      <div className="topLeft">
-        {/* moved the social icons */}
-      </div>
+      <div className="topLeft">{/* moved the social icons */}</div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
@@ -24,9 +22,14 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
-           <li className="topListItem">
+          <li className="topListItem">
             <Link className="link" to="/compose">
               COMPOSE
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/contact">
+              CONTACT
             </Link>
           </li>
           <li className="topListItem" onClick={handleLogout}>
@@ -37,8 +40,12 @@ export default function TopBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-          {/* adding publicFile +  to the source should fix the profile pic issue, but it didn't */}
-            <img className="topImg" src={publicFile+ user.profilePicture} alt="" />
+            {/* adding publicFile +  to the source should fix the profile pic issue, but it didn't */}
+            <img
+              className="topImg"
+              src={publicFile + user.profilePicture}
+              alt=""
+            />
           </Link>
         ) : (
           <ul className="topList">
@@ -54,8 +61,13 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
+        <div className="searchBar">
+          <input type="text" placeholder="Search..." className="searchInput" />
+          <i className="topSearchIcon fas fa-search"></i>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default TopBar;

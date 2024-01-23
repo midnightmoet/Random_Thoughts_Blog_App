@@ -1,60 +1,81 @@
 .top {
-    width: 100%;
-    height: 50px;
-    background-color: white;
-    position: sticky;
-    top: 0px;
-    display: flex;
-    align-items: center;
-    font-family: 'Koh Santepheap', cursive;
-    z-index: 999;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  font-family: "Koh Santepheap", cursive;
+  z-index: 999;
 }
 
 /* This gives custom sizes to the additions to the topbar */
-.topLeft, .topRight {
-    flex: 3; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.topLeft,
+.topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topCenter {
-    flex: 6;
+  flex: 6;
 }
-
 
 /* this covers the <img> element */
 .topImg {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 /* This takes the vertical list and makes it horizontal */
 .topList {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
 }
 
 /* this spaces out the list items previously created */
 .topListItem {
-    margin-right: 20px;
-    font-size:18px;
-    font-weight: 300;
-    cursor: pointer;
-    color: black;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  color: black;
 }
 
 /* this styles the magnifying glass */
 .topSearchIcon {
-    font-size: 18px;
-    color: green;
-    cursor: pointer;
-    margin-left: 15px;
-    
+  font-size: 18px;
+  color: green;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Search bar styling */
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.topSearchIcon {
+  color: #555;
+  cursor: pointer;
 }

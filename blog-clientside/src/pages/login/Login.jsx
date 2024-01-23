@@ -43,15 +43,17 @@ export default function Login() {
           placeholder="Enter your password..."
           ref={passwordRef}
         />
+
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
+        <p className="click-link">
+					Don't have an account?
+					<a href="/register">
+						Register
+					</a>
+				</p>
       </form>
-      <button className="loginRegisterButton">
-        <Link className="link" to="/register">
-          Register
-        </Link>
-      </button>
     </div>
   );
 }

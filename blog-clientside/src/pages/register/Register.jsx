@@ -57,9 +57,12 @@ export default function Register() {
 					Register
 				</button>
 			</form>
-			<button className="registerLoginButton">
-				<Link className= "link" to="/login">Login</Link>
-			</button>
+			<p className="click-link">
+					Already have an account?
+					<a href="/login">
+						Login
+					</a>
+				</p>
 			{error && <span style={{color:"red" ,marginTop: "25px" }}>Something went wrong with this request</span>}
 		</div>
 	);
