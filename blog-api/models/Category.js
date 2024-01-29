@@ -11,5 +11,4 @@ const CategorySchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Category", CategorySchema);
-
 // Cleaned up 1/23/2024

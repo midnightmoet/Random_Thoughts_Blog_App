@@ -31,18 +31,8 @@
     "yarn": "^1.22.15"
   },
   "scripts": {
-<<<<<<< HEAD
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
-=======
-    
-    "start": "react-scripts --openssl-legacy-provider start",
-    
-    
-    "build": "react-scripts --openssl-legacy-provider build",
-    
-    
->>>>>>> 99337b1ea0b98ed4d5bf26d49940b356b2f9cacd
     "test": "react-scripts test",
     
     
@@ -68,11 +58,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3"
-=======
->>>>>>> 99337b1ea0b98ed4d5bf26d49940b356b2f9cacd
   }
 }

@@ -1,4 +1,3 @@
-// tested
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema(
@@ -8,7 +7,7 @@ const PostSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    description: {
+    desc: {
       type: String,
       required: true,
     },
@@ -18,7 +17,7 @@ const PostSchema = new mongoose.Schema(
     },
     username: {
       type: String,
-      required: false,
+      required: true,
     },
     categories: {
       type: Array,
@@ -29,6 +28,4 @@ const PostSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Post", PostSchema);
-
-
 // Cleaned up 1/23/2024

@@ -2,10 +2,10 @@ const router = require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");
 
-// CREATE POST
+//CREATE POST
 router.post("/", async (req, res) => {
+  const newPost = new Post(req.body);
   try {
-    const newPost = new Post(req.body);
     const savedPost = await newPost.save();
     res.status(200).json(savedPost);
   } catch (err) {
@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// UPDATE POST
+//UPDATE POST
 router.put("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -21,7 +21,9 @@ router.put("/:id", async (req, res) => {
       try {
         const updatedPost = await Post.findByIdAndUpdate(
           req.params.id,
-          { $set: req.body },
+          {
+            $set: req.body,
+          },
           { new: true }
         );
         res.status(200).json(updatedPost);
@@ -36,7 +38,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// DELETE POST
+//DELETE POST
 router.delete("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -55,7 +57,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// GET POST
+//GET POST
 router.get("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -65,7 +67,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// GET ALL POSTS
+//GET ALL POSTS
 router.get("/", async (req, res) => {
   const username = req.query.user;
   const catName = req.query.cat;
@@ -74,7 +76,11 @@ router.get("/", async (req, res) => {
     if (username) {
       posts = await Post.find({ username });
     } else if (catName) {
-      posts = await Post.find({ categories: { $in: [catName] } });
+      posts = await Post.find({
+        categories: {
+          $in: [catName],
+        },
+      });
     } else {
       posts = await Post.find();
     }
@@ -85,5 +91,4 @@ router.get("/", async (req, res) => {
 });
 
 module.exports = router;
-
 // Cleaned up 1/23/2024
